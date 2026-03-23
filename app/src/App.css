@@ -1,0 +1,88 @@
+/* PhishGuard App Styles */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Smooth transitions for cards */
+.card-transition {
+  transition: all 0.3s ease;
+}
+
+/* Custom scrollbar for history */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Animation for result appearance */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-animate {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Pulse animation for checking state */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+.pulse-ring {
+  animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+/* Status color utilities */
+.status-safe {
+  color: #22c55e;
+}
+
+.status-suspicious {
+  color: #eab308;
+}
+
+.status-phishing {
+  color: #ef4444;
+}
+
+/* Background gradients for status cards */
+.bg-safe {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+}
+
+.bg-suspicious {
+  background: linear-gradient(135deg, #fef9c3 0%, #fde047 100%);
+}
+
+.bg-phishing {
+  background: linear-gradient(135deg, #fee2e2 0%, #fca5a5 100%);
+}
